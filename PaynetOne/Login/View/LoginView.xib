@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="PaynetOne" customModuleProvider="target">
+            <connections>
+                <outlet property="btnLogin" destination="bH3-Vf-pWy" id="Zm5-K1-sdM"/>
+                <outlet property="txtPassword" destination="wwx-EG-HaF" id="lmp-JE-wgQ"/>
+                <outlet property="txtPhoneNumber" destination="RfO-Nm-nxq" id="0AY-eW-dDi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Số điện thoại" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RfO-Nm-nxq">
+                    <rect key="frame" x="20" y="275" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="c0s-Qe-Jc5"/>
+                    </constraints>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mật khẩu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wwx-EG-HaF">
+                    <rect key="frame" x="20" y="345" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="oGn-Bc-C4s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bH3-Vf-pWy">
+                    <rect key="frame" x="20" y="415" width="374" height="50"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="M7Q-Jn-NcG"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Đăng nhập">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onLogin:" destination="-1" eventType="touchUpInside" id="Ftj-YY-hGk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wwx-EG-HaF" firstAttribute="top" secondItem="RfO-Nm-nxq" secondAttribute="bottom" constant="20" id="4eK-Gi-YKV"/>
+                <constraint firstItem="bH3-Vf-pWy" firstAttribute="top" secondItem="wwx-EG-HaF" secondAttribute="bottom" constant="20" id="7lI-hh-t2T"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RfO-Nm-nxq" secondAttribute="trailing" constant="20" id="C5G-kT-XUP"/>
+                <constraint firstItem="RfO-Nm-nxq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fML-gH-Cin"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wwx-EG-HaF" secondAttribute="trailing" constant="20" id="flh-fU-aqA"/>
+                <constraint firstItem="RfO-Nm-nxq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="231" id="iro-si-R09"/>
+                <constraint firstItem="bH3-Vf-pWy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="isY-nh-RvF"/>
+                <constraint firstItem="wwx-EG-HaF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="omJ-6O-DNE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bH3-Vf-pWy" secondAttribute="trailing" constant="20" id="v70-6J-5K1"/>
+            </constraints>
+            <point key="canvasLocation" x="170" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
