@@ -39,7 +39,8 @@ class RootViewController: UIViewController {
     }
     
     func switchToRegister() {
-        animateDismissTransition(to: UINavigationController(rootViewController: LoginViewController()))
+        navController = UINavigationController(rootViewController: LoginViewController())
+        animateDismissTransition(to: navController)
     }
     
     private func animateFadeTransition(to new: UIViewController, completion: (() -> Void)? = nil) {

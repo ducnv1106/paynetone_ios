@@ -45,7 +45,12 @@ final class AreaPickerViewController: UIViewController {
         /// true if search bar in tableView header
         $0.hidesNavigationBarDuringPresentation = true
         $0.searchBar.searchBarStyle = .minimal
-        $0.searchBar.textField?.textColor = .black
+        if isDarkMode{
+            $0.searchBar.textField?.textColor = .white
+        }else{
+            $0.searchBar.textField?.textColor = .black
+        }
+       
         $0.searchBar.textField?.clearButtonMode = .whileEditing
         return $0
     }(UISearchController(searchResultsController: nil))

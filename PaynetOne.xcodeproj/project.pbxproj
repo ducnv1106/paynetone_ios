@@ -632,8 +632,8 @@
 				6983387D2833AE3100538371 /* Register */,
 				6983387C2833AE1B00538371 /* ForgotPassword */,
 				359831A8277DAF6F00C4747D /* LoginViewController.swift */,
-				1C1F3D6527BCE440001325C2 /* SelectBusinessServiceVC.swift */,
 				1C5BC09227BF7E9D00884539 /* SelectedBankVC.swift */,
+				1C1F3D6527BCE440001325C2 /* SelectBusinessServiceVC.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -1797,7 +1797,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PaynetOne/PaynetOne.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.6;
+				CURRENT_PROJECT_VERSION = 1.0.7;
 				DEVELOPMENT_TEAM = XYWPXC625U;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)",
@@ -1820,7 +1820,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paynetone.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1838,7 +1838,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PaynetOne/PaynetOne.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.6;
+				CURRENT_PROJECT_VERSION = 1.0.7;
 				DEVELOPMENT_TEAM = XYWPXC625U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PaynetOne/Info.plist;
@@ -1857,7 +1857,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.6;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.paynetone.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

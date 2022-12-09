@@ -30,9 +30,9 @@ class ForgotPasswordInputNewPassVC: BaseUI {
     
     private func initUI(){
         lbNewPass = POMaker.makeLabel(text: "Mật khẩu mới *", require: true)
-        tfNewPass = POMaker.makeTextField(placeholder: "Nhập mật khẩu mới",textColor: .white ,isPass: true)
+        tfNewPass = POMaker.makeTextField(placeholder: "Nhập mật khẩu mới",textColor: .black ,isPass: true)
         lbNewPassConfirm = POMaker.makeLabel(text: "Xác nhận mật khẩu *", require: true)
-        tfNewPassConfirm = POMaker.makeTextField(placeholder: "Nhập lại mật khẩu mới",textColor: .white ,isPass: true)
+        tfNewPassConfirm = POMaker.makeTextField(placeholder: "Nhập lại mật khẩu mới",textColor: .black ,isPass: true)
         lbNote = POMaker.makeLabel(text: "Lưu ý: Độ dài mật khẩu yêu cầu từ 6-50 ký tự, bao gồm ít nhất một ký tự viết thường, một ký tự chữ số, một ký tự đặc biệt và một ký tự viết hoa.", color: .red, alignment: .center)
         btnConfirm = POMaker.makeButton(title: "Xác nhận")
     }

@@ -20,9 +20,25 @@ class CreatePinCodeViewController: BaseUI {
     private var showHidePin = true {
         didSet {
             if showHidePin {
-                showHidePinBtn.setImage(UIImage(named: "eye_showing"), for: .normal)
+                
+                if isDarkMode{
+                    let image =  UIImage(named: "eye_showing")?.withTintColor(.white, renderingMode: .alwaysTemplate)
+                    showHidePinBtn.setImage(image, for: .normal)
+                }else{
+                    let image =  UIImage(named: "eye_showing")?.withTintColor(.black, renderingMode: .alwaysTemplate)
+                    showHidePinBtn.setImage(image, for: .normal)
+                }
+                
             } else {
-                showHidePinBtn.setImage(UIImage(named: "eye_hidding"), for: .normal)
+                
+                if isDarkMode{
+                    let image =  UIImage(named: "eye_hidding")?.withTintColor(.white, renderingMode: .alwaysTemplate)
+                    showHidePinBtn.setImage(image, for: .normal)
+                }else{
+                    let image =  UIImage(named: "eye_hidding")?.withTintColor(.black, renderingMode: .alwaysTemplate)
+                    showHidePinBtn.setImage(image, for: .normal)
+                }
+                
             }
             pinField.isSecureTextEntry = showHidePin
         }
@@ -30,9 +46,25 @@ class CreatePinCodeViewController: BaseUI {
     private var showHideRePin = true {
         didSet {
             if showHideRePin {
-                showHideRePinBtn.setImage(UIImage(named: "eye_showing"), for: .normal)
+                
+                if isDarkMode{
+                    let image =  UIImage(named: "eye_showing")?.withTintColor(.white, renderingMode: .alwaysTemplate)
+                    showHideRePinBtn.setImage(image, for: .normal)
+                }else{
+                    let image =  UIImage(named: "eye_showing")?.withTintColor(.black, renderingMode: .alwaysTemplate)
+                    showHideRePinBtn.setImage(image, for: .normal)
+                }
+                
             } else {
-                showHideRePinBtn.setImage(UIImage(named: "eye_hidding"), for: .normal)
+                //                showHideRePinBtn.setImage(UIImage(named: "eye_hidding"), for: .normal)
+                
+                if isDarkMode{
+                    let image =  UIImage(named: "eye_hidding")?.withTintColor(.white, renderingMode: .alwaysTemplate)
+                    showHideRePinBtn.setImage(image, for: .normal)
+                }else{
+                    let image =  UIImage(named: "eye_hidding")?.withTintColor(.black, renderingMode: .alwaysTemplate)
+                    showHideRePinBtn.setImage(image, for: .normal)
+                }
             }
             rePinField.isSecureTextEntry = showHideRePin
         }
@@ -325,6 +357,13 @@ class SuccessModalView: UIViewController {
         lbMessage.top(toAnchor: titleSuccess.bottomAnchor, space: 16)
         lbMessage.horizontal(toView: view, space: 14)
         lbMessage.bottom(toView: view, space: 20)
+        
+        titleSuccess.textColor = .blueColor
+        if isDarkMode{
+            self.view.applyViewDarkMode()
+        }else{
+            self.view.backgroundColor = .white
+        }
     }
 }
 

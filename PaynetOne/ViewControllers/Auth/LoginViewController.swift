@@ -129,7 +129,7 @@ class LoginViewController: BaseUI {
         self.navigationController?.setNavigationBarHidden(false, animated: animated);
         super.viewWillDisappear(animated)
         
-        unregisterNotifi()
+     
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -166,7 +166,7 @@ class LoginViewController: BaseUI {
     
     
     deinit {
-      
+       unregisterNotifi()
     }
     
     private func registerNotifi(){
@@ -223,7 +223,7 @@ class LoginViewController: BaseUI {
     }
     
     @objc func dontAccount_tap(_ gesture: UITapGestureRecognizer){
-        navigationController?.pushViewController(RegisterViewController(), animated: true)
+        self.navigationController?.pushViewController(RegisterViewController(), animated: true)
         self.clearInputPassword()
     }
     
@@ -233,7 +233,7 @@ class LoginViewController: BaseUI {
     
     @objc private func forgotPassButton_touchup(){
         let vc = ForgotPasswordGetOTPVC()
-        navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
         self.clearInputPassword()
     }
     
@@ -359,6 +359,7 @@ class LoginViewController: BaseUI {
             if stt {
                 StoringService.shared.saveData(user: response, key: Constants.configData)
                 if let id = userData?.paynetId, id > 0 {
+                    self.unregisterNotifi()
                     StoringService.shared.saveData(user: loginData, key: Constants.userData)
                     StoringService.shared.saveData(user: self.tfPhoneNumber.text ?? "", key: "PHONE_NUMBER_LOGIN")
                     SceneDelegate.shared.rootViewController.switchToMain()

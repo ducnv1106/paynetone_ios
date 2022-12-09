@@ -29,16 +29,19 @@ class RegisterFormSuccess: UIViewController {
         buttonSucess.horizontal(toView: view, space: 16)
         buttonSucess.height(50)
         buttonSucess.addTarget(self, action: #selector(buttonSucess_touchUp), for: .touchUpInside)
-//        configThemeView()
+        configBackgorundColor()
     }
     
     @objc private func buttonSucess_touchUp(){
         popToViewController(navigationController: navigationController!, className: LoginViewController.self)
     }
     
-    private func configThemeView(){
-        lbTitle.theme_textColor = ThemeColorPicker(colors: "#FFF")
-        lbMessage.theme_textColor = ThemeColorPicker(colors: "#FFF")
-        
+    
+    func configBackgorundColor(){
+        if isDarkMode {
+            self.view.backgroundColor = .black
+        }else{
+            self.view.backgroundColor = .backgroundColor
+        }
     }
 }
